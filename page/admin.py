@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Page
+from .models import Page,Carousel
 
 
 
@@ -17,6 +17,9 @@ class PageModify(admin.ModelAdmin):
         'status',
     )
     list_filter = ('status',)
-
-
+    
 admin.site.register(Page,PageModify)
+
+
+# class CarouselAdmin(admin.ModelAdmin):
+admin.site.register(Carousel)
